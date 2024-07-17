@@ -1,0 +1,50 @@
+.product-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.badges{
+    margin: 1rem;
+
+}
+.dropdown{
+  margin: 30px 0 0 50px;
+  display: inline-block;
+}
+.cart{
+  margin-left: 630px;
+  position: relative;
+}
+.no-underline{
+  text-decoration: none;
+  color: inherit;
+}
+.list-item{
+ list-style-type: none;
+}
+.sticky-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Ensure the navbar is above other content */
+  background-color: #343a40; /* Example background color */
+  box-shadow: 0 2px 2px -2px gray; /* Optional: Add a shadow for better visibility */
+  font-size: larger;
+}
+.cart-img{
+  width: 60px;
+  margin: 20PX;
+}
+.list-item{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.left-content {
+  display: flex;
+  align-items: center;
+}
+.right-content {
+  text-align: right;
+}
