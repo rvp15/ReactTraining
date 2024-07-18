@@ -3,7 +3,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { Col, Row } from "react-bootstrap";
 import ListGroup from "react-bootstrap/ListGroup";
 import Dropdown from "react-bootstrap/Dropdown";
-import { updateQuantity } from "../slices/cartSlice";
+import { updateQuantity, removeItem } from "../slices/cartSlice";
+import { RiDeleteBinLine } from "react-icons/ri";
 
 const CartPage = () => {
   const dispatch = useDispatch();
@@ -14,6 +15,11 @@ const CartPage = () => {
     console.log(value);
     dispatch(updateQuantity({ id, quantity: value }));
   };
+
+  const handleDelete = (id) => {
+dispatch(removeItem(id))
+  }
+
   return (
     <div>
       <h2 className="p-5"> Cart ({items.length} items)</h2>
@@ -58,6 +64,7 @@ const CartPage = () => {
               <Col md={2} className="col">
                 $ {item.price * item.quantity}
               </Col>
+              <Col><button className="cart-del-btn" onClick={()=>handleDelete(item.id)}><RiDeleteBinLine/></button></Col>
             </Row>
           </ListGroup.Item>
         ))}

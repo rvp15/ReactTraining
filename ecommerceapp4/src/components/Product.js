@@ -20,7 +20,7 @@ const Product = (props) => {
         <Card.Body>
           <span className="badge text-bg-success custom-badge badges">
             {category}
-          </span>{" "}
+          </span>
           <br />
           <Card.Title>C{title}</Card.Title>
           <Card.Text>{description}</Card.Text>

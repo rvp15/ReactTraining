@@ -5,7 +5,6 @@ import { allProducts } from "../slices/productSlice";
 
 const ProductList = () => {
   const dispatch = useDispatch();
-  //const products = useSelector((state) => state.product.products);
   const filteredProducts = useSelector((state) => state.product.filteredProducts);
 
 

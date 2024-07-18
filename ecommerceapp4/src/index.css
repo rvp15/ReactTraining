@@ -48,3 +48,19 @@
 .right-content {
   text-align: right;
 }
+.cart-del-btn{
+  outline: none;
+  border: none;
+  background-color: transparent;
+  cursor:pointer;
+}
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.quantity-display {
+  font-size: 1.2rem;
+  font-weight: bold;
+}

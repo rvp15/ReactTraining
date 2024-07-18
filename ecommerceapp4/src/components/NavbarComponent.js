@@ -5,7 +5,6 @@ import { BsCart4 } from "react-icons/bs";
 import { Link} from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
-
 const NavbarComponent = () => {
   const items = useSelector((state) => state.cart.items)
   const totalQuantity = items.reduce((total,item)=>{

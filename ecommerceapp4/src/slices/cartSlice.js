@@ -23,11 +23,7 @@ const cartSlice = createSlice({
     removeItem: (state, action) => {
       const itemId = action.payload;
       const existingItem = state.items.find((i) => i.id === itemId.id);
-      if (existingItem.quantity > 1) {
-        existingItem.quantity--;
-      } else {
-        state.items = state.items.filter((i) => i.id !== itemId);
-      }
+      state.items = state.items.filter((i) => i.id !== itemId);
       localStorage.setItem('cartItems', JSON.stringify(state.items)); // Save to localStorage
     },
     updateQuantity: (state,action) => {
